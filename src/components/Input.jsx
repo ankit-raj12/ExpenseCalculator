@@ -3,9 +3,11 @@ import { useState } from "react";
 export default function Input({ setBill }) {
   const [meal, setMeal] = useState("");
   const [price, setPrice] = useState("");
+  const [date, setDate] = useState("");
 
   const handleSubmit = (price, meal) => {
-    const date = new Date().toLocaleDateString("en-IN");
+    // const date = new Date().toLocaleDateString("en-IN");
+    setDate(new Date().toLocaleDateString("en-IN"))
     if (!meal || !price) return;
     setBill((prev) => [...prev, { meal, amount: +price, date }]);
     setMeal("");
@@ -19,7 +21,7 @@ export default function Input({ setBill }) {
           e.preventDefault();
           handleSubmit(price, meal);
         }}
-        className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-2xl mx-auto px-4"
+        className="flex flex-col lg:flex-row gap-4 justify-center items-center w-full max-w-2xl mx-auto px-4"
       >
         <div className="relative w-full sm:w-auto">
           <input
@@ -41,6 +43,19 @@ export default function Input({ setBill }) {
             value={price}
             className="w-full sm:w-64 px-6 py-4 rounded-2xl outline-none glass-input text-white placeholder-white/70 text-center font-medium transition-all duration-300 focus:scale-105"
             type="number"
+            placeholder="💰 Enter the amount"
+            autoComplete="off"
+            inputMode="decimal"
+          />
+        </div>
+        <div className="relative w-full sm:w-auto">
+          <input
+            onChange={(e) => {
+              setDate(e.target.value);
+            }}
+            value={date}
+            className="w-full sm:w-64 px-6 py-4 rounded-2xl outline-none glass-input text-white placeholder-white/70 text-center font-medium transition-all duration-300 focus:scale-105"
+            type="date"
             placeholder="💰 Enter the amount"
             autoComplete="off"
             inputMode="decimal"
