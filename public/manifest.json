@@ -1,0 +1,20 @@
+{
+  "name": "Food Bill Tracker",
+  "short_name": "FoodBill",
+  "description": "Track your daily food expenses easily",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "lifestyle", "productivity"],
+  "lang": "en"
+}
