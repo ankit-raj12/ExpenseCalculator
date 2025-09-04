@@ -165,3 +165,17 @@ button, .touch-target {
     0 8px 16px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
+
+/* Delete button styles */
+.delete-button {
+  background: #ef4444 !important;
+  color: white !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4) !important;
+  z-index: 10 !important;
+}
+
+.delete-button:hover {
+  background: #dc2626 !important;
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.6) !important;
+}

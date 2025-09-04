@@ -6,12 +6,15 @@ export default function Input({ setBill }) {
   const [date, setDate] = useState("");
 
   const handleSubmit = (price, meal) => {
-    // const date = new Date().toLocaleDateString("en-IN");
-    setDate(new Date().toLocaleDateString("en-IN"))
     if (!meal || !price) return;
-    setBill((prev) => [...prev, { meal, amount: +price, date }]);
+    
+    // Use input date if provided, otherwise use today's date
+    const finalDate = date || new Date().toLocaleDateString("en-IN");
+    
+    setBill((prev) => [...prev, { meal, amount: +price, date: finalDate }]);
     setMeal("");
     setPrice("");
+    setDate(""); // Clear the date field too
   };
 
   return (

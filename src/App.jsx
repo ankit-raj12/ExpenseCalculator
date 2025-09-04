@@ -32,7 +32,7 @@ function AppContent() {
       <ThemeToggle />
       <Name name={"Ankit"} />
       <Input setBill={setBill} bill={bill} />
-      <CardList bill={bill} />
+      <CardList bill={bill} setBill={setBill} />
       <InstallPrompt />
     </div>
   )
