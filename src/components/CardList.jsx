@@ -5,7 +5,7 @@ export default function CardList({ bill }) {
 
   return (
     <div className="w-full max-w-6xl mx-auto">
-      <div className="bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-500 text-white text-2xl sm:text-3xl font-bold px-8 py-6 rounded-3xl mx-auto mt-8 shadow-2xl text-center border-4 border-white/30 backdrop-blur-lg w-fit">
+      <div className="glass-total text-2xl sm:text-3xl font-bold px-8 py-6 rounded-3xl mx-auto mt-8 text-center w-fit">
         <span className="drop-shadow-lg">
           💰 Total: ₹{totalAmount}
         </span>

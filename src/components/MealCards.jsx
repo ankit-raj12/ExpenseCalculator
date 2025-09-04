@@ -1,8 +1,8 @@
 export default function MealCard({ amount, meal, date }) {
   return (
-    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-6 shadow-2xl transition-all duration-300 hover:shadow-3xl hover:scale-105 hover:bg-white/15 active:scale-95 group">
+    <div className="glass-card rounded-3xl p-6 transition-all duration-300 hover:scale-105 active:scale-95 group">
       <div className="text-center">
-        <div className="bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 text-white py-3 px-6 rounded-2xl text-xl font-bold mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300">
+        <div className="bg-gradient-to-r from-pink-400/80 via-purple-500/80 to-indigo-500/80 text-white py-3 px-6 rounded-2xl text-xl font-bold mb-4 backdrop-blur-sm group-hover:shadow-xl transition-all duration-300">
           <span className="capitalize">{meal}</span>
         </div>
         

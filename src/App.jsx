@@ -3,8 +3,11 @@ import './App.css'
 import Input from './components/Input'
 import Name from './components/Name'
 import CardList from './components/CardList'
+import ThemeToggle from './components/ThemeToggle'
+import InstallPrompt from './components/InstallPrompt'
+import { ThemeProvider } from './contexts/ThemeContext'
 
-export default function App() {
+function AppContent() {
   const [bill, setBill] = useState(() => {
     try {
       const saved = localStorage.getItem('foodBill');
@@ -25,10 +28,20 @@ export default function App() {
   }, [bill]);
 
   return (
-    <div className="safe-area">
+    <div className="safe-area relative">
+      <ThemeToggle />
       <Name name={"Ankit"} />
       <Input setBill={setBill} bill={bill} />
       <CardList bill={bill} />
+      <InstallPrompt />
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   )
 }

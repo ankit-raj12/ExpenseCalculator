@@ -1,0 +1,19 @@
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with rounded corners -->
+  <rect width="192" height="192" rx="28.8" fill="url(#bg192)"/>
+  
+  <!-- Food icon -->
+  <circle cx="96" cy="80" r="45" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <text x="96" y="95" font-family="Arial, sans-serif" font-size="45" text-anchor="middle" fill="white">🍕</text>
+  
+  <!-- App name -->
+  <text x="96" y="140" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Food Bill</text>
+  <text x="96" y="158" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="rgba(255,255,255,0.8)">Tracker</text>
+</svg>
